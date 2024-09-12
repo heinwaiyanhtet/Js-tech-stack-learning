@@ -1,12 +1,16 @@
-import Template from "../template";
+import { Suspense } from "react";
+import PostFeed from "@/components/PostFeed";
+import Weather from "@/components/Weather";
 
 export default function page() {
   return (
-    <div>
-    
-        <h1>
-          Hello from dashboard
-        </h1>
-    </div>
+    <section>
+      <Suspense fallback={<p>Loading feed...</p>}>
+        <PostFeed />
+      </Suspense>
+      <Suspense fallback={<p>Loading weather...</p>}>
+        <Weather />
+      </Suspense>
+    </section>
   )
 }
