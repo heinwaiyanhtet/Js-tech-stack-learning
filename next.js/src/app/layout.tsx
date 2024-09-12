@@ -1,25 +1,22 @@
-// import type { Metadata } from 'next'
-
-
-// export const metadata: Metadata = {
-//   title: 'Next.js',
-// }
-
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+import Link from 'next/link'
+ 
+export default function Layout({
+  auth,
+  children,
+}: {
+  auth: React.ReactNode
+  children: React.ReactNode
+}) {
   return (
-   <html>
-        <body>
-
-          <h1>from root layout</h1>
-
-          <main>
-
-            {children}
-
-
-          </main>
+    <html>
+      <body>
+        
+      <nav>
+        <Link href="/login">Open modal</Link>
+      </nav>
+      <div>{auth}</div>
+      <div>{children}</div>
       </body>
-   </html>
+    </html>
   )
-} 
+}
