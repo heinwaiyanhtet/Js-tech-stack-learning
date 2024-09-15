@@ -1,12 +1,95 @@
+// function greeter(fn: (a: string) => void) {
+//     fn("Hello, World");
+//   }
+   
+//   function printToConsole(s: string) {
+//     console.log(s);
+//   }
+   
+//   greeter(printToConsole);
+
+function greeter(fn: (a: string) => void) {
+    fn("Hello, World");
+  } 
+
+  function printToConsole(s: string) {
+    console.log(s);
+  }
+  
+  greeter(printToConsole);
+
+// function greeter(fn: (a: string) => void) {
+//     fn("Hello, World");
+// }
+  
+//   function printToConsole(s: string) {
+//     console.log(s);
+//   }
+  
+//   greeter(printToConsole); // Output: "Hello, World"
+  
+
+
+
+
+// interface Circle {
+//     kind: "circle";
+//     radius: number;
+//   }
+  
+//   interface Square {
+//     kind: "square";
+//     sideLength: number;
+//   }
+  
+//   interface Triangle {
+//     kind: "triangle";
+//     sideLength: number;
+//   }
+  
+// type Shape = Circle | Square | Triangle;
+
+// function getArea(shape: Shape): number {
+//   switch (shape.kind) {
+//     case "circle":
+//       return Math.PI * shape.radius ** 2;
+//     case "square":
+//       return shape.sideLength ** 2;
+//     // case "triangle":
+//     //     return (Math.sqrt(3) / 4) * shape.sideLength ** 2;
+//     default:
+//       const _exhaustiveCheck: never = shape;
+//       return _exhaustiveCheck; 
+//   }
+// }
+
+
+// type Fish = { swim: () => void };
+// type Bird = { fly: () => void };
+ 
+// function move(animal: Fish | Bird) {
+//   if ("swim" in animal) {
+//     return animal.swim();
+//   }
+ 
+//   return animal.fly();
+// }
+
+
+
+
 
 // Argument of type 'string | number' is not assignable to parameter of type 'number'.
 //   Type 'string' is not assignable to type 'number'.
 
-function padLeft(padding:number | string,input :string) : string
-{
-    return " ".repeat(padding) + input;
-}
+// function padLeft(padding:number | string,input :string) : string
+// {
+//     if (typeof padding === "number")
+//     {
+//         return " ".repeat(padding) + input;
 
+//     }
+// }
 
 
 
