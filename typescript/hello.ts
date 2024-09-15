@@ -1,3 +1,17 @@
+type SomeConstructor = 
+{
+    new (s: string): Date;
+};
+  
+function fn(ctor: SomeConstructor)
+{
+    return new ctor("hello");
+}
+
+const date = fn(Date); 
+
+  
+
 // function greeter(fn: (a: string) => void) {
 //     fn("Hello, World");
 //   }
@@ -8,15 +22,15 @@
    
 //   greeter(printToConsole);
 
-function greeter(fn: (a: string) => void) {
-    fn("Hello, World");
-  } 
+// function greeter(fn: (a: string) => void) {
+//     fn("Hello, World");
+//   } 
 
-  function printToConsole(s: string) {
-    console.log(s);
-  }
+//   function printToConsole(s: string) {
+//     console.log(s);
+//   }
   
-  greeter(printToConsole);
+//   greeter(printToConsole);
 
 // function greeter(fn: (a: string) => void) {
 //     fn("Hello, World");
