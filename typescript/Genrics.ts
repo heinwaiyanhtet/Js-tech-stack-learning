@@ -1,3 +1,8 @@
+function identity<Type>(arg:Type) : Type {
+    return arg;
+}
+
+
 // Restricting Genrics With Constraints
 
 interface LengthWise
@@ -12,7 +17,7 @@ function loggingIdentity<Type extends LengthWise>(arg: Type): Type
     return arg;
 }
 
-loggingIdentity([1, 2, 3]);
+loggingIdentity([]);
 
 
 ////////////////////////////////////////////////////////////////
