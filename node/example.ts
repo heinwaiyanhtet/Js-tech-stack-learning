@@ -1,9 +1,9 @@
 
-type User = {
+type User = 
+{
   username: string,
   age: number,
 }
-
 
 function isAdult(user: User) : boolean
 {
@@ -11,12 +11,12 @@ function isAdult(user: User) : boolean
 
 }
 
-
 const user : User = {
     username: "hein wai yan htet",
     age: 20
 }
 
 const ispersonAdult : boolean = isAdult(user);
+
 console.log(ispersonAdult);
 
